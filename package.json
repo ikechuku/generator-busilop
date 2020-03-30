@@ -1,7 +1,7 @@
 {
   "name": "generator-busilop",
   "version": "1.0.0",
-  "description": "Yeoman generator to scaffold a simple form",
+  "description": "Yeoman generator",
   "files": [
     "generators"
   ],

@@ -1,4 +1,4 @@
-# Yeoman generator example
+# Yeoman generator
 
 Stay tuned for the blog post 👀
 
@@ -18,8 +18,8 @@ yarn
 yarn link
 ```
 
-4. Create a test directory and start the generator by running:
+4. Create a directory (where you want to scaffold your app) and start the generator by running:
 
 ```sh
-yo example
+yo busilop
 ```
