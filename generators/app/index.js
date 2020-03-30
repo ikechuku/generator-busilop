@@ -19,7 +19,7 @@ module.exports = class extends Generator {
       {
         type: 'input',
         name: 'name',
-        message: 'Input the name for this module',
+        message: 'Input the name for this app',
         validate: input => Boolean(input.length),
       },
     ]);
@@ -27,36 +27,21 @@ module.exports = class extends Generator {
 
   // second stage
   writing() {
-    const pkgJson = {
-      devDependencies: {
-        eslint: '^3.15.0',
-      },
-      dependencies: {
-        react: '^16.2.0',
-      },
-    };
-
-    // Extend or create package.json file in destination path
-    this.fs.extendJSON(this.destinationPath('package.json'), pkgJson);
-  }
-
-  install() {
-    this.npmInstall();
-    this.log('Writing files... 📝');
+    // this.log('Writing files... 📝');
 
     const { type, name } = this.answers;
-    if (type === 'screen') {
+    if (type === 'Survey') {
       this.fs.copyTpl(
-        this.templatePath('form.html'),
-        this.destinationPath(`components/${name}.js`),  
+        this.templatePath('component.html'),
+        this.destinationPath(`components/${name}.html`),
         {
           name,
         },
       );
     } else {
       this.fs.copyTpl(
-        this.templatePath('module.js'),
-        this.destinationPath(`modules/${name.toLowerCase()}.js`),
+        this.templatePath('index.html'),
+        this.destinationPath(`components/${name}-index.html`),
         {
           name,
         },
@@ -66,6 +51,6 @@ module.exports = class extends Generator {
 
   // last stage
   end() {
-    this.log('Scaffolding created successfully Bye... 👋');
+    this.log('Scaffolding created successfully... 👋');
   }
 };
