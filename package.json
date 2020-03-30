@@ -1,0 +1,16 @@
+{
+  "name": "generator-busilop",
+  "version": "1.0.0",
+  "description": "Yeoman generator to scaffold a simple form",
+  "files": [
+    "generators"
+  ],
+  "keywords": [
+    "yeoman-generator"
+  ],
+  "author": "t3chkn1ght",
+  "license": "MIT",
+  "dependencies": {
+    "yeoman-generator": "^3.2.0"
+  }
+}
